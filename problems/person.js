@@ -25,4 +25,5 @@ coolPerson.update({ name: 'Chris', age: 33})// new values such as { name: 'mai',
 // going to have to call update
 // //pass in an object to update
 //reassign this.age and this.name to the values from the object
+//greet all is a loop
 module.exports = Person;
