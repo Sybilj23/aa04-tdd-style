@@ -12,18 +12,23 @@ class Person {
   switchVisit(otherPerson) {
     return otherPerson.visit(this);
   }
-  update(obj){
-    if(typeof obj === 'object'){
-      console.log('is an object');
+  update(obj) {
+    if (typeof obj === "object") {
+      console.log("is an object");
     }
+  }
+  static greetAll(peopleArray) {
+    console.log(peopleArray);
   }
 }
 let coolPerson = new Person("mai", 32); // Person { name: 'mai', age: 32 }
 let person1 = new Person("Lulu", 32); // Person { name: 'mai', age: 32 }
 // console.log(coolPerson.switchVisit(person1));
-coolPerson.update({ name: 'Chris', age: 33})// new values such as { name: 'mai', age: 32 }
+coolPerson.update({ name: "Chris", age: 33 }); // new values such as { name: 'mai', age: 32 }
 // going to have to call update
 // //pass in an object to update
 //reassign this.age and this.name to the values from the object
 //greet all is a loop
+//greetAll() takes in an array Person.greetAll
+Person.greetAll([coolPerson, person1]);
 module.exports = Person;
